@@ -1,0 +1,4 @@
+azure-cognitiveservices-speech
+beautifulsoup4
+nltk
+deepl
