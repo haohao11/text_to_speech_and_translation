@@ -14,6 +14,7 @@ https://www.deepl.com/en/docs-api/
 - the third target language is set to Spanish (ES)
 
 ## Note:
+- all the documents are encoded using utf-8
 - the free version of azure is limited to translating a certain number of sentences each time
 - the default number is set to 20 sentences at once
 
