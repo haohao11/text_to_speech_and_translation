@@ -74,11 +74,11 @@ def main():
                         help='the start position (beginning with 0) of the sentences to be processed')
     # The authentification keys of azure and DeepL
     # Set the default to your own keys
-    parser.add_argument('--tts_key', type=str, default="insert your own key here", 
+    parser.add_argument('--tts_key', type=str, default="insert your key here", 
                         help='Azure text-to-speech key')
     parser.add_argument('--region', type=str, default="westeurope", 
                         help='Azure text-to-speech region')
-    parser.add_argument('--deepl_key', type=str, default="insert your own key here", 
+    parser.add_argument('--deepl_key', type=str, default="insert your key here", 
                         help='DeepL text-to-speech key')    
     args = parser.parse_args(sys.argv[1:])
     
@@ -90,12 +90,12 @@ def main():
     sentences, words = ebook_to_text(args.file)
     
     # write the unique words by frequency in a descending order
-    with open(os.path.join(args.directory, 'words.doc'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(args.directory, 'words.txt'), 'w', encoding='utf-8') as f:
         for key, value in words.items():
             f.write(key + '\n')
             
     ######################## Start the process ################################
-    with open(os.path.join(args.directory, 'translation.doc'), 'a', encoding='utf-8') as f:  
+    with open(os.path.join(args.directory, 'translation.txt'), 'a', encoding='utf-8') as f:  
                
         count = args.sentence_index
         if count > 0:
